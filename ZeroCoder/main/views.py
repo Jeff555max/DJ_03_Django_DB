@@ -3,8 +3,13 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("<h1>Это мой первый проект на Django</h1>")
+    return render(request, 'index.html')
 
-def new(request):
-    return HttpResponse("<h1>Это вторая страница моего проекта на Django</h1>")
+def about(request):
+    return render(request, 'about.html')
 
+def services(request):
+    return render(request, 'services.html')
+
+def contact(request):
+    return render(request, 'contact.html')
