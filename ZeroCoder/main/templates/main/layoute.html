@@ -21,13 +21,18 @@
     <aside>
         <img src="{% static 'main/image/Wolf.gif' %}" alt="Волк из мультфильма" width="150px">
 
-        <span>WolfDjango</span>
+        <span>{{caption}}</span>
+        <!  либо просто писать <span>WolfDjango</span> и в views.py убрать тогда
+        data = {
+        'caption': "WolfDjango"
+        }
+        и data из return render ()>
 
         <ul>
-            <li><a href="{% url 'home' %}">Главная</a></li> # Можно делать как во Flask href="/"
-            <li><a href="{% url 'about us' %}">Обо мне</a></li> # Можно делать как во Flask href="/адрес URL"
-            <li><a href="{% url 'Uslugi' %}">Услуги</a></li>  # Можно делать как во Flask href="/адрес URL"
-            <li><a href="{% url 'мои контакты' %}">Контакты</a></li> # Можно делать как во Flask href="/адрес URL"
+            <li><a href="{% url 'home' %}">Главная</a></li> <! Можно делать как во Flask href="/" >
+            <li><a href="{% url 'about us' %}">Обо мне</a></li> <! Можно делать как во Flask href="/адрес URL" >
+            <li><a href="{% url 'Uslugi' %}">Услуги</a></li>  <! Можно делать как во Flask href="/адрес URL" >
+            <li><a href="{% url 'мои контакты' %}">Контакты</a></li> <! Можно делать как во Flask href="/адрес URL" >
         </ul>
 
     </aside>
