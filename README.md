@@ -1,2 +1,2 @@
-# DJ_01_Django
+# DJ_02_Django
  
