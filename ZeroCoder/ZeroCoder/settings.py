@@ -123,4 +123,10 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEBUG = True
+# Вероятно, в вашем проекте также будут статические ресурсы, которые не привязаны к конкретному приложению.
+# В дополнение к использованию каталога static/ внутри ваших приложений, вы можете определить список каталогов (STATICFILES_DIRS)
+# в файле настроек, где Django также будет искать статические файлы. Например:
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    "/var/www/static/",
+]
