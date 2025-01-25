@@ -22,11 +22,12 @@
         <img src="{% static 'main/image/Wolf.gif' %}" alt="Волк из мультфильма" width="150px">
 
         <span>{{caption}}</span>
-        <!  либо просто писать <span>WolfDjango</span> и в views.py убрать тогда
+
+        <!  либо просто писать вместо {{caption}} WolfDjango и в views.py убрать тогда
         data = {
         'caption': "WolfDjango"
         }
-        и data из return render ()>
+        и data из return render () >
 
         <ul>
             <li><a href="{% url 'home' %}">Главная</a></li> <! Можно делать как во Flask href="/" >
