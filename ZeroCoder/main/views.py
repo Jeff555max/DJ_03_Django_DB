@@ -14,6 +14,13 @@ def services(request):
 def contact(request):
     return render(request, 'main/contact.html')
 
+def header(request):
+    return render(request, 'main/header.html')
+
+
+
+
+
 def new(request):
     return HttpResponse('<h1> Первая страница </h1>')
 
