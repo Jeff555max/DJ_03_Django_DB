@@ -24,10 +24,10 @@
         <span>WolfDjango</span>
 
         <ul>
-            <li><a href="{% url 'home' %}">Главная</a></li>
-            <li><a href="{% url 'about us' %}">Обо мне</a></li>
-            <li><a href="{% url 'Uslugi' %}">Услуги</a></li>
-            <li><a href="{% url 'мои контакты' %}">Контакты</a></li>
+            <li><a href="{% url 'home' %}">Главная</a></li> # Можно делать как во Flask href="/"
+            <li><a href="{% url 'about us' %}">Обо мне</a></li> # Можно делать как во Flask href="/адрес URL"
+            <li><a href="{% url 'Uslugi' %}">Услуги</a></li>  # Можно делать как во Flask href="/адрес URL"
+            <li><a href="{% url 'мои контакты' %}">Контакты</a></li> # Можно делать как во Flask href="/адрес URL"
         </ul>
 
     </aside>
