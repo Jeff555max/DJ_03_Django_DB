@@ -3,12 +3,12 @@ from . import views # точка . говорит о том, что мы нах�
 
 
 urlpatterns = [
-    path('', views.index, name='index'),  # при переходе на главную страницу мы из views вызываем функцию index
-    path('about/', views.about, name='about'),  # при переходе не на главную страницу, а на страницу например с названием about
+    path('', views.index, name='home'),  # при переходе на главную страницу мы из views вызываем функцию index
+    path('about/', views.about, name='about us'),  # при переходе не на главную страницу, а на страницу например с названием about
                             # мы из views вызываем функцию about
 
-    path('services/', views.services, name='services'),
-    path('contact/', views.contact, name='contact'),
+    path('services/', views.services, name='Uslugi'),
+    path('contact/', views.contact, name='мои контакты'),
 
 
 
