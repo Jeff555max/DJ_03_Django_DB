@@ -6,7 +6,7 @@ urlpatterns = [
     path('', views.index, name='index'),  # при переходе на главную страницу мы из views вызываем функцию index
     path('about/', views.about, name='about'),  # при переходе не на главную страницу, а на страницу например с названием about
                             # мы из views вызываем функцию about
-    path('about/', views.about, name='about'),
+
     path('services/', views.services, name='services'),
     path('contact/', views.contact, name='contact'),
 
