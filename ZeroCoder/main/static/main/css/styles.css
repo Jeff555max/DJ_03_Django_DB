@@ -1,3 +1,21 @@
-body{
-    background-color: orange;
+html, body {
+    height: 100%; /* Устанавливаем высоту для всей страницы */
+    margin: 0;    /* Убираем отступы */
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* Растягиваем блок до полной высоты */
+}
+
+main {
+    flex: 1; /* Растягиваем основной контент, чтобы футер сдвинулся вниз */
+}
+
+footer {
+    background-color: #343a40; /* Темный фон футера */
+    color: white;             /* Белый текст */
+    text-align: center;
+    padding: 1rem;
 }
