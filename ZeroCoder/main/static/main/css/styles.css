@@ -1,21 +1,75 @@
-html, body {
-    height: 100%; /* Устанавливаем высоту для всей страницы */
-    margin: 0;    /* Убираем отступы */
+/* Основные стили для всего сайта */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ff9800; /* Светло-оранжевый фон для основного тела */
+    color: #212529; /* Текст темного цвета */
 }
 
-#content {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%; /* Растягиваем блок до полной высоты */
+/* Стили для навигационной панели */
+nav {
+    background-color: #ffffff; /* Белый фон */
+    border-bottom: 1px solid #dee2e6; /* Светлая граница снизу */
+    color: #212529; /* Темный текст */
+    padding: 1rem 0;
+    position: sticky; /* Навигация всегда остается сверху */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
 }
 
-main {
-    flex: 1; /* Растягиваем основной контент, чтобы футер сдвинулся вниз */
+nav .navbar-brand,
+nav .nav-link {
+    color: #212529; /* Темный цвет текста */
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-footer {
-    background-color: #343a40; /* Темный фон футера */
-    color: white;             /* Белый текст */
+nav .nav-link:hover {
+    color: #007bff; /* Синий при наведении */
+}
+
+.navbar-toggler {
+    border-color: #212529; /* Темная рамка для кнопки */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Стили для aside */
+aside {
+    background-color: #ffffff; /* Белый фон */
+    color: #343a40; /* Темный текст */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
     text-align: center;
-    padding: 1rem;
 }
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin: 10px 0;
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: #0056b3; /* Темно-синий текст */
+    font-weight: bold;
+}
+
+aside ul li a:hover {
+    color: #d9534f; /* Красный при наведении */
+}
+
+/* Главный контент */
+main {
+    margin-top: 20px;
+    background-color: #ffffff; /* Белый фон */
+    padding: 20px;
+    border-radius:
