@@ -9,6 +9,7 @@ urlpatterns = [
 
     path('services/', views.services, name='Uslugi'),
     path('contact/', views.contact, name='мои контакты'),
+    path('news/', views.new, name='Новости'),
 
 
 
