@@ -1,2 +1,29 @@
 # DJ_02_Django_DB
- 
+
+## Основные команды при создании проекта Django
+
+.venv/Scripts/activate   
+pip install django
+
+django-admin startproject (название проекта) -создание проекта
+
+python manage.py startapp (название приложения) -создание приложения
+
+python manage.py runserver -запуск проекта
+остановить- CTRL C
+
+Миграции создают связь между базой данных и между приложением, соединяет их.
+В пакете migrations через терминал создаём файл:
+
+ python manage.py makemigrations
+
+В пакете создастся файл 0001_initial.py. В нём более подробно описаны поля таблицы, а также создано ключевое поле ‘id’.
+Такое поле должно быть в каждой таблице.
+Запускаем миграции через терминал.
+
+python manage.py migrate -запуск миграции 
+
+python manage.py createsuperuser- создание пароля и имени администратора
+
+
+
