@@ -17,8 +17,6 @@ def services(request):
 def contact(request):
     return render(request, 'main/contact.html')
 
-def new(request):
-    return render(request, 'main/new.html')
 
 
 

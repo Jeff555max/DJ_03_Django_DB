@@ -9,11 +9,7 @@ urlpatterns = [
 
     path('services/', views.services, name='Uslugi'),
     path('contact/', views.contact, name='мои контакты'),
-    path('news/', views.new, name='Новости'),
 
-
-
-    path('new/', views.new ), # можно уже удалить, это для создания простых страниц с текстом
-    path('new2/', views.new2 ), # можно уже удалить, это для создания простых страниц с текстом
-    path('new3/', views.new3 ), # можно уже удалить, это для создания простых страниц с текстом
 ]
+
+
