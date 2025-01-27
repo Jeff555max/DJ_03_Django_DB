@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse # можно уже удалить, это для создания простых страниц с текстом
 
 
 def index(request):
@@ -20,10 +20,10 @@ def contact(request):
 
 
 def new(request):
-    return HttpResponse('<h1> Первая страница </h1>')
+    return HttpResponse('<h1> Первая страница </h1>') # можно уже удалить, это для создания простых страниц с текстом
 
 def new2(request):
-    return HttpResponse('<h1> Вторая страница </h1>')
+    return HttpResponse('<h1> Вторая страница </h1>') # можно уже удалить, это для создания простых страниц с текстом
 
 def new3(request):
-    return HttpResponse('<h1> Третья страница </h1>')
+    return HttpResponse('<h1> Третья страница </h1>')# можно уже удалить, это для создания простых страниц с текстом
