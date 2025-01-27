@@ -12,6 +12,9 @@ class NewsPost(models.Model):  # NewsPost Имена классов в коде 
     text = models.TextField('Какие то новости') # Класс TextField -текст может быть любой длины
     pub_date = models.DateTimeField('Дата публикации') # Дата и время публикации
 
+    def __str__(self):
+        return self.title
+
 # создаём вложенный класс, чтобы на русском языке было название нашей таблицы в панели администрирования
 
     class Meta:  # (это название Meta: обязательно должно быть таким, а не другим)

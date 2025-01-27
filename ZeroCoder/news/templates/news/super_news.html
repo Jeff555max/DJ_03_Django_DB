@@ -7,4 +7,11 @@
 
 {% block content%}
     <h1> Самые главные, очень важные и нужные, интересные новости из файла super_news.html </h1>
+    {% for new in news %}
+	    <div>
+		    <h3> {{ new.title }} </h3>
+		    <p> {{ new.short_description }} </p>
+            <p> {{ new.text }} </p>
+	    </div>
+    {% endfor %}
 {% endblock %}
