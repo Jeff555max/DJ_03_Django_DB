@@ -11,6 +11,7 @@ class NewsPost(models.Model):  # NewsPost Имена классов в коде 
     short_description = models.CharField('Краткое описание новости', max_length=200)
     text = models.TextField('Какие то новости') # Класс TextField -текст может быть любой длины
     pub_date = models.DateTimeField('Дата публикации') # Дата и время публикации
+    writer = models.CharField('Имя пользователя', max_length=50)
 
     def __str__(self):
         return self.title
