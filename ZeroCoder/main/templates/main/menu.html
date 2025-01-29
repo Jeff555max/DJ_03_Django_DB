@@ -6,12 +6,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
+
                 <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Главная</a></li> <! Можно делать как во Flask href="/" >
                 <li class="nav-item"><a class="nav-link" href="{% url 'about us' %}">Обо мне</a></li> <! Можно делать как во Flask href="/адрес URL" >
                 <li class="nav-item"><a class="nav-link" href="{% url 'Uslugi' %}">Услуги</a></li> <! Можно делать как во Flask href="/адрес URL" >
                 <li class="nav-item"><a class="nav-link" href="{% url 'мои контакты' %}">Контакты</a></li> <! Можно делать как во Flask href="/адрес URL" >
                 <li class="nav-item"><a class="nav-link" href="{% url 'Новости' %}">Новости</a></li> <! Можно делать как во Flask href="/адрес URL" >
-                <li>class="nav-item"><a class="nav-link" href="{% url '' %}">Добавить новость</a></li>  <! Можно делать как во Flask href="/адрес URL" >
+                <li class="nav-item"><a class="nav-link" href="{% url 'add_news' %}">Добавить новость</a></li>  <! Можно делать как во Flask href="/адрес URL" >
+
+                        <! add_news,Новости--- из name=  файла news/urls.py >
+                        <! мои контакты,Uslugi, Обо мне, Главная--- из name=  файла main/urls.py >
+
             </ul>
         </div>
     </div>

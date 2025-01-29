@@ -35,7 +35,11 @@
             <li><a href="{% url 'Uslugi' %}">Услуги</a></li> <! Можно делать как во Flask href="/адрес URL" >
             <li><a href="{% url 'мои контакты' %}">Контакты</a></li> <! Можно делать как во Flask href="/адрес URL" >
             <li><a href="{% url 'Новости' %}">Новости</a></li> <! Можно делать как во Flask href="/адрес URL" >
-            <li><a href="{% url '' %}">Добавить новость</a></li>  <! Можно делать как во Flask href="/адрес URL" >
+            <li><a href="{% url 'add_news' %}">Добавить новость</a></li>  <! Можно делать как во Flask href="/адрес URL" >
+
+                       <! add_news,Новости--- из name=  файла news/urls.py >
+                       <! мои контакты,Uslugi, Обо мне, Главная--- из name=  файла main/urls.py >
+
         </ul>
     </aside>
 

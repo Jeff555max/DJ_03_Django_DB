@@ -8,7 +8,7 @@ def news_home(request):
 	return render(request, 'news/super_news.html',{'news': news})
 
 def create_news(request):
-	return render(request, 'news/super_news.html')
+	return render(request, 'news/add_new_post.html')
 
 
 
