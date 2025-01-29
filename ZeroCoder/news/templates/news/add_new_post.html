@@ -6,18 +6,38 @@
 {% endblock %}
 
 {% block content%}
-    <h1> Добавить новость </h1>
 
-<div>
-	<h2>Форма для добавления новостей</h2>
-	<form method="post" >
-		<input type="text" placeholder="Заголовок новости"> <br>
-		<input type="text" placeholder="Краткое описание новости"> <br>
-		<textarea placeholder="Содержание новости"></textarea> <br> <! textarea позволяет вводить большие объёмы текста>
-		<input type="date"> <br>
-		<input type="time"> <br>
-		<button type="submit">Добавить новость</button>
-	</form>
+
+<div class="container mt-5">
+    <div class="card shadow-sm p-4">
+        <h2 class="mb-4 text-center">Добавить новость</h2>
+        <form method="post">
+            <div class="mb-3">
+                <label class="form-label">Заголовок новости</label>
+                <input type="text" class="form-control" placeholder="Введите заголовок">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Краткое описание</label>
+                <input type="text" class="form-control" placeholder="Введите краткое описание">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Содержание новости</label>
+                <textarea class="form-control" rows="4" placeholder="Введите текст новости"></textarea>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Дата</label>
+                    <input type="date" class="form-control">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Время</label>
+                    <input type="time" class="form-control">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Добавить новость</button>
+        </form>
+    </div>
 </div>
+
 
 {% endblock %}
