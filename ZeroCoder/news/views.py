@@ -14,7 +14,7 @@ def news_home(request):
 def create_news(request):
     error = ""
     if request.method == 'POST':
-        form = NewsPostForm(request.POST)  # Сюда сохранится информация от пользователя.
+        form = NewsPostForm(request.POST)  # Сюда сохранится информация от пользователя, которую он ввел в форму.
         if form.is_valid():
             form.save()
 
