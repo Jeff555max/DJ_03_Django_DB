@@ -1,8 +1,7 @@
-
 {% extends 'main/layoute.html' %}
 
 {% block title %}
-     Добавить новость
+Добавить новость
 {% endblock %}
 
 {% block content%}
@@ -14,33 +13,49 @@
 
         <form method="post">
 
-            {% csrf_token %}  <! это обязательно, чтобы не вылазила ошибка CSRF. Для прохождения проверки >
+            {% csrf_token %}  <!-- это обязательно, чтобы не вылазила ошибка CSRF. Для прохождения проверки -->
 
             <div class="mb-3">
-                <label class="form-label">Заголовок новости</label>
-                {{form.title}} <! из models.py, эти же названия полей прописаны в файле forms.py>
+                 <!-- можно удалить то, что не связано с БД
+                        <label for="title">Заголовок новости</label>
+                        <input type="text" class="form-control" id="title" placeholder="Введите заголовок новости">
+                        -->
+                <input type="text" name="title" class="form-control" placeholder="Введите заголовок новости" maxlength="50" required="" id="id_title">
+                {{form.title}} <!--из models.py, эти же названия полей прописаны в файле forms.py-->
             </div>
             <div class="mb-3">
-                <label class="form-label">Краткое описание</label>
-                {{form.short_description}} <! из models.py, эти же названия полей прописаны в файле forms.py>
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Содержание новости</label>
-                {{form.text}} <! из models.py, эти же названия полей прописаны в файле forms.py>
-            </div>
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">Дата</label>
-                    {{form.pub_date}} <! из models.py, эти же названия полей прописаны в файле forms.py>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">Время</label>
-                    {{form.pub_date}} <! из models.py, эти же названия полей прописаны в файле forms.py>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Добавить новость</button>
-        </form>
+                <input type="text" name="short_description" class="form-control" placeholder="Введите краткое описание новости" maxlength="200" required="" id="id_short_description">
+                {{form.short_description}} <!-- из models.py, эти же названия полей прописаны в файле forms.py-->
+            <!-- можно удалить
+                    <label for="shortDescription">Краткое описание новости</label>
+                    <input type="text" class="form-control" id="shortDescription" placeholder="Введите краткое описание новости">
+                    -->
     </div>
+    <div class="mb-3">
+        <!-- можно удалить
+                        <label for="content">Текст новости</label>
+                        <textarea class="form-control" id="content" placeholder="Введите текст новости" rows="4"></textarea>
+                        -->
+        <textarea name="text" cols="40" rows="10" class="form-control" placeholder="Введите текст новости" required="" id="id_text"></textarea>
+        {{form.text}} <! из models.py, эти же названия полей прописаны в файле forms.py>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <!-- можно удалить
+                        <label for="date">Дата публикации</label>
+                        <input type="date" class="form-control" id="date">
+                        -->
+            <input type="text" name="pub_date" class="form-control" placeholder="Дата публикации" required="" id="id_pub_date">
+            {{form.pub_date}} <!-- из models.py, эти же названия полей прописаны в файле forms.py-->
+        </div>
+        <div class="col-md-6 mb-3">
+            <input type="text" name="pub_date" class="form-control" placeholder="Дата публикации" required="" id="id_pub_date">
+            {{form.pub_date}}
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Добавить новость</button>
+    </form>
+</div>
 </div>
 
 
