@@ -14,7 +14,7 @@ def create_news(request):
         form = NewsPostForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('news_home')  # Убедитесь, что в urls.py есть path с name='news_home'
+            return redirect('Новости')
         else:
             error = "Данные были заполнены некорректно"
     else:
