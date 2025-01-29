@@ -23,7 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = ([
     path('admin/', admin.site.urls),
     path('', include('main.urls')), # обработка нашего перехода на главную страницу '' (на файлы приложения main)
-    path('news', include('news.urls')), # обработка нашего перехода на файлы приложения news
+    path('news/', include('news.urls')), # обработка нашего перехода на файлы приложения news
 ]
     + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)) # Обслуживание статических файлов во время разработки
 # Если вы используете django.contrib.staticfiles, как описано выше, runserver сделает это автоматически,

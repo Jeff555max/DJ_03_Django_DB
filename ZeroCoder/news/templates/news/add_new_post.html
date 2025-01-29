@@ -23,23 +23,24 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Краткое описание</label>
-                <input type="text" class="form-control" placeholder="Введите краткое описание">
+
                 {{form.short_description}} <! из models.py, эти же названия полей прописаны в файле forms.py>
             </div>
             <div class="mb-3">
                 <label class="form-label">Содержание новости</label>
-                <textarea class="form-control" rows="4" placeholder="Введите текст новости"></textarea>
+
                 {{form.text}} <! из models.py, эти же названия полей прописаны в файле forms.py>
             </div>
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Дата</label>
-                    <input type="date" class="form-control">
+
                     {{form.pub_date}} <! из models.py, эти же названия полей прописаны в файле forms.py>
                 </div>
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Время</label>
-                    <input type="time" class="form-control">
+
+                    {{form.pub_date}} <! из models.py, эти же названия полей прописаны в файле forms.py>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary w-100">Добавить новость</button>
