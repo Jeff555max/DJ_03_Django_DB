@@ -9,21 +9,18 @@
     <h1> Самые главные, очень важные и нужные, интересные новости из файла super_news.html </h1>
     {% if news %}
         {% for new in news %}
-
-
+            <div class="card">
                 <div class="card" style="width: 30rem;">
-
-                      <div class="card-body">
+                    <div class="card-body">
                         <h5 class="card-title">{{ new.title }}</h5> <! new -переменная,  title из файла 0001_initial>
                         <h6 class="card-subtitle mb-2 text-body-secondary">{{ new.short_description }}</h6> <! new -переменная, short_description из файла 0001_initial>
                         <p class="card-text">{{ new.text }}</p> <! new -переменная, text из файла 0001_initial>
                         <p class="card-data">{{ new.pub_date  }}</p> <! new -переменная, pub_date из файла 0001_initial >
                         <p class="card-writer">{{ new.writer }}</p><! new -переменная, writer из файла 0001_initial >
                         <a href="#" class="card-link">Подробнее</a>
-                      </div>
-
+                    </div>
                 </div>
-
+            </div>
         {% endfor %}
     {% else %}
 		<h4>Новостей ещё нет.</h4>
