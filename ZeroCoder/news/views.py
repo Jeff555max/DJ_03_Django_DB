@@ -7,5 +7,8 @@ def news_home(request):
 	news = NewsPost.objects.all()
 	return render(request, 'news/super_news.html',{'news': news})
 
+def create_news(request):
+	return render(request, 'news/super_news.html')
+
 
 
