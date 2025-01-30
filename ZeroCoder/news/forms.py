@@ -6,6 +6,7 @@ class NewsPostForm(ModelForm):
     class Meta:
         model = NewsPost
         fields = ['title', 'short_description', 'text', 'pub_date',]
+        # Виджеты, для создания функциональной формы, пишется именно так, а не иначе
         widgets = {
             'title': TextInput(attrs={'class': 'form-control', 'placeholder': 'Введите заголовок новости'}),
             'short_description': TextInput(attrs={'class': 'form-control', 'placeholder': 'Краткое описание новости'}),

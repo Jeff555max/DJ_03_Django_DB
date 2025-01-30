@@ -10,32 +10,56 @@
     <div class="card shadow-sm p-4">
         <h2 class="mb-4 text-center">Добавить новость</h2>
 
-        <form method="post">
-            {% csrf_token %}  <!-- это обязательно, чтобы не вылазила ошибка CSRF -->
+        <form method="post"> <!-- можно указать здесь action указывает, куда будут перенаправляться данные,
+                    когда мы их отправим, и какая функция будет их обрабатывать. Можем указать action.
+                    Если его не указать, обрабатывать будет та же функция, которая открывает страницу -->
+
+            {% csrf_token %} <!- это обязательно, чтобы не вылазила ошибка CSRF -->
 
             <div class="mb-3">
                 {{ form.title.label_tag }} <!-- Название поля -->
                 {{ form.title }} <!-- Поле ввода из формы -->
+                <!-- можно удалить то, что не связано с БД
+                        <label for="title">Заголовок новости</label>
+                        <input type="text" class="form-control" id="title" placeholder="Введите заголовок новости">
+                        -->
             </div>
 
             <div class="mb-3">
                 {{ form.short_description.label_tag }} <!-- Название поля -->
                 {{ form.short_description }} <!-- Поле ввода из формы -->
+                <!-- можно удалить
+                        <label for="shortDescription">Краткое описание новости</label>
+                        <input type="text" class="form-control" id="shortDescription" placeholder="Введите краткое описание новости">
+                        -->
             </div>
 
             <div class="mb-3">
                 {{ form.text.label_tag }} <!-- Название поля -->
                 {{ form.text }} <!-- Поле ввода из формы -->
+                <!-- можно удалить
+                        <label for="content">Текст новости</label>
+                        <textarea class="form-control" id="content" placeholder="Введите текст новости" rows="4"></textarea>
+                        -->
             </div>
 
             <div class="mb-3">
                 {{ form.pub_date.label_tag }} <!-- Название поля -->
                 {{ form.pub_date }} <!-- Поле ввода из формы -->
+                <!-- можно удалить
+                        <label for="date">Дата публикации</label>
+                        <input type="date" class="form-control" id="date">
+                        -->
             </div>
 
             <div class="mb-3">
                 {{ form.writers.label_tag }} <!-- Название поля -->
                 {{ form.writers }} <!-- Поле ввода из формы -->
+
+                <!-- можно удалить
+                    <label for="time">Время публикации</label>
+                    <input type="time" class="form-control" id="time">
+                -->
             </div>
 
             <button type="submit" class="btn btn-primary w-100">Добавить новость</button>
